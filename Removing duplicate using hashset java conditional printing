@@ -1,0 +1,18 @@
+import java.util.HashSet;
+
+public class test {
+
+	private static <T> HashSet<T> removeDuplicate(T... array) {
+		HashSet<T> hs = new HashSet<T>();
+		for (T i : array)
+			hs.add(i);
+		return hs;
+	}
+
+	public static void main(String[] args) {
+
+		HashSet<String> hs = removeDuplicate(new String[] { "Mohammed", "Shafiq" });
+		hs.forEach(value -> System.out.println(value == "Mohammed" ? "yes" : "No"));
+
+	}
+}
